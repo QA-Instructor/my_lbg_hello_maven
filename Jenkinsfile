@@ -34,7 +34,7 @@ pipeline {
         stage('Done') {
             steps {
                 // Get some code from a GitHub repository
-                sh "Completed"
+                echo "Completed"
             }
         }
     }
