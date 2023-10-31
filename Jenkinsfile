@@ -34,7 +34,8 @@ pipeline {
         stage('Wait for Business Input') {
             steps {
                  waitUntil {
-                    echo "Please Approve"         
+                    echo "Please Approve"
+                    input message: "Check for approval?" // Manually trigger check status
                 }
             }
         }
