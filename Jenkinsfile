@@ -12,12 +12,29 @@ pipeline {
                 // Get some code from a GitHub repository
                 git branch: 'main', url:'https://github.com/kudaz28/lbg-hello-world-maven.git'
             }
-
         }
-        stage('Compile') {
+        stage('Build') {
+            steps {
+                // Get some code from a GitHub repository
+                echo 'Now running build'
+            }
+        }
+        stage('Unit Tests') {
+            steps {
+                // Get some code from a GitHub repository
+                echo 'Now running tests'
+            }
+        }
+        stage('Package') {
             steps {
                 // Get some code from a GitHub repository
                 sh "mvn clean compile"
+            }
+        }
+        stage('Done') {
+            steps {
+                // Get some code from a GitHub repository
+                sh "Completed"
             }
         }
     }
