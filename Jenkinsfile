@@ -31,6 +31,12 @@ pipeline {
                 sh "mvn clean compile"
             }
         }
+        stage('Deploy the Code to Customers') {
+            steps {
+                // Get some code from a GitHub repository
+                echo "Completed"
+            }
+        }
         stage('Done') {
             steps {
                 // Get some code from a GitHub repository
