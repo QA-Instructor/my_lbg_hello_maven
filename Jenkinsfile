@@ -31,6 +31,13 @@ pipeline {
                 sh "mvn clean compile"
             }
         }
+        stage('Wait for Business Input') {
+            steps {
+                 waitUntil {
+                    echo "Please Approve"         
+                }
+            }
+        }
         stage('Deploy the Code to Customers') {
             steps {
                 // Get some code from a GitHub repository
